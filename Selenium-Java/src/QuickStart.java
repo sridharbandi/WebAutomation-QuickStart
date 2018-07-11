@@ -6,14 +6,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class QuickStart {
 
     public static void main(String[] args) throws InterruptedException {
-
+        System.setProperty("webdriver.chrome.driver","./drivers/chromedriver");
         WebDriver driver = new ChromeDriver();
-        driver.get("http://www.google.com/xhtml");
-        Thread.sleep(5000);
-        WebElement searchBox = driver.findElement(By.name("q"));
-        searchBox.sendKeys("ChromeDriver");
+        driver.get("http://www.google.com");
+        WebElement searchBox = driver.findElement(By.id("lst-ib"));
+        searchBox.sendKeys("Selenium");
         searchBox.submit();
-        Thread.sleep(5000);
         driver.quit();
     }
 }
