@@ -8,6 +8,7 @@ public class QuickStart {
 
     public static void main(String[] args){
         System.setProperty(ChromeDriverService.CHROME_DRIVER_EXE_PROPERTY,"./drivers/chromedriver");
+        //
         //System.setProperty("webdriver.chrome.driver","./drivers/chromedriver");
         WebDriver driver = new ChromeDriver();
         driver.get("http://www.google.com");
