@@ -11,10 +11,10 @@ public class QuickStart {
         //
         //System.setProperty("webdriver.chrome.driver","./drivers/chromedriver");
         WebDriver driver = new ChromeDriver();
-        driver.get("http://www.google.com");
-        WebElement searchBox = driver.findElement(By.id("lst-ib"));
+        driver.get("https://sridharbandi.github.io/reactapp/");
+        WebElement searchBox = driver.findElement(By.id("idtext"));
         searchBox.sendKeys("Selenium");
-        searchBox.submit();
+        driver.findElement(By.id("idbutton")).click();
         driver.quit();
     }
 }
