@@ -6,9 +6,9 @@ fun main(args: Array<String>) {
     System.setProperty(ChromeDriverService.CHROME_DRIVER_EXE_PROPERTY, "./drivers/chromedriver")
     //System.setProperty("webdriver.chrome.driver","./drivers/chromedriver")
     val driver = ChromeDriver()
-    driver.get("http://www.google.com")
-    val searchBox = driver.findElement(By.id("lst-ib"))
+    driver.get("https://sridharbandi.github.io/reactapp/")
+    val searchBox = driver.findElement(By.id("idtext"))
     searchBox.sendKeys("Selenium")
-    searchBox.submit()
+    driver.findElement(By.id("idbutton")).click()
     driver.quit()
 }
